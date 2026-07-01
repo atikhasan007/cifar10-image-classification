@@ -70,9 +70,9 @@ cd cifar10-image-classification
 conda create -n abc python=3.8
 conda activate abc
 pip install -r requiremetns.txt
+```
 
-
-## ⚙️ Project Workflow
+### ⚙️ Project Workflow
 ```bash
 Update config.yaml
 Update params.yaml
