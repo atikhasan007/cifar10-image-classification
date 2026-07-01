@@ -94,3 +94,44 @@ Update the app.py
 <img width="925" height="990" alt="Screenshot 2026-07-01 192613" src="https://github.com/user-attachments/assets/d0c9619d-bb00-44db-a4a9-c7fac470d39d" />
 <img width="938" height="1017" alt="Screenshot 2026-07-01 192548" src="https://github.com/user-attachments/assets/29db3893-506e-40ee-aae6-06b64a3ec297" />
 <img width="940" height="866" alt="Screenshot 2026-07-01 192300" src="https://github.com/user-attachments/assets/1b16b712-96ee-468b-ae6d-c4ec94530092" />
+
+
+
+
+## Future Improvements
+
+### Infrastructure & Deployment
+- Docker containerization for consistent deployment
+- AWS/GCP based cloud deployment
+- Model serving and scalable API deployment
+- Distributed data storage and caching
+
+### DevOps & CI/CD
+- GitHub Actions based CI/CD pipeline
+- Automated testing and deployment workflow
+- Monitoring and logging integration
+
+### Codebase Improvements
+- Modular clean architecture
+- Service-based project structure
+- Improved error handling and validation
+- Environment-based configuration management
+- Improve model performance while enhancing accuracy.
+
+### UI/UX Improvements
+- More interactive and responsive UI
+- Dashboard visualization
+- Better accessibility and user experience
+
+### System Design & Documentation
+- High Level Design (HLD)
+- Low Level Design (LLD)
+- System architecture diagrams
+- Wireframes and workflow diagrams
+- Technical documentation and reporting
+
+##   Author & Contact 
+- Md Atik Hasan
+- Email : imatik513@gmail.com
+- Phone : +8801827693853
+
