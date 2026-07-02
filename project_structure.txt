@@ -1,0 +1,135 @@
+Folder PATH listing
+Volume serial number is 000000AF D0A8:974B
+C:.
+|   .gitignore
+|   app.py
+|   inputImage.jpg
+|   LICENSE
+|   main.py
+|   params.yaml
+|   project_structure.txt
+|   README.md
+|   requiremetns.txt
+|   scores.json
+|   setup.py
+|   template.py
+|   
++---.github
+|   \---workflows
+|           .gitkeep
+|           
++---artifacts
+|   +---data_ingestion
+|   |       X_test.npy
+|   |       X_train.npy
+|   |       y_test.npy
+|   |       y_train.npy
+|   |       
+|   +---prepare_model
+|   |       model.keras
+|   |       
+|   \---training
+|           history.json
+|           history.pkl
+|           model.h5
+|           
++---config
+|       config.yaml
+|       
++---logs
+|       running_logs.log
+|       
++---model_10_epoch
+|       model.h5
+|       
++---research
+|       01_data_ingestion.ipynb
+|       02_prepare_image_model.ipynb
+|       03_model_trainer.ipynb
+|       04_model_evaluation_file.ipynb
+|       just_model_evaluation_file.ipynb
+|       trials.ipynb
+|       
++---src
+|   +---cnnClassifier
+|   |   |   __init__.py
+|   |   |   
+|   |   +---components
+|   |   |   |   data_ingestion.py
+|   |   |   |   evaluation.py
+|   |   |   |   model_traine.py
+|   |   |   |   prepare_model.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           data_ingestion.cpython-38.pyc
+|   |   |           evaluation.cpython-38.pyc
+|   |   |           model_traine.cpython-38.pyc
+|   |   |           prepare_model.cpython-38.pyc
+|   |   |           __init__.cpython-38.pyc
+|   |   |           
+|   |   +---config
+|   |   |   |   configuration.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           configuration.cpython-38.pyc
+|   |   |           __init__.cpython-38.pyc
+|   |   |           
+|   |   +---constants
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           __init__.cpython-38.pyc
+|   |   |           __init__.cpython-39.pyc
+|   |   |           
+|   |   +---entity
+|   |   |   |   config_entity.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           config_entity.cpython-38.pyc
+|   |   |           __init__.cpython-38.pyc
+|   |   |           
+|   |   +---pipeline
+|   |   |   |   predict.py
+|   |   |   |   stage_01_data_ingestion.py
+|   |   |   |   stage_02_prepare_model.py
+|   |   |   |   stage_03_model_trainer.py
+|   |   |   |   stage_04_model_evaluation.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           predict.cpython-38.pyc
+|   |   |           stage_01_data_ingestion.cpython-38.pyc
+|   |   |           stage_02_prepare_model.cpython-38.pyc
+|   |   |           stage_03_model_trainer.cpython-38.pyc
+|   |   |           stage_04_model_evaluation.cpython-38.pyc
+|   |   |           __init__.cpython-38.pyc
+|   |   |           
+|   |   +---utils
+|   |   |   |   common.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           common.cpython-38.pyc
+|   |   |           common.cpython-39.pyc
+|   |   |           __init__.cpython-38.pyc
+|   |   |           __init__.cpython-39.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           __init__.cpython-38.pyc
+|   |           __init__.cpython-39.pyc
+|   |           
+|   +---cnnClassifier.egg-info
+|   |       dependency_links.txt
+|   |       PKG-INFO
+|   |       SOURCES.txt
+|   |       top_level.txt
+|   |       
+|   \---logs
+|           running_logs.log
+|           
+\---templates
+        index.html
+        
