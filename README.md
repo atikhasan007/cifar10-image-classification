@@ -87,7 +87,7 @@ Update the app.py
 
 # USER UI 
 
-<img width="686" height="728" alt="Screenshot 2026-07-01 193025" src="https://github.com/user-attachments/assets/9483cb75-9fbf-4c67-9e9e-203ffd0b7ef5" />
+<img width="932" height="952" alt="image" src="https://github.com/user-attachments/assets/c743c5bb-0d0e-4276-a4c8-909f6c09f852" />
 <img width="851" height="942" alt="image" src="https://github.com/user-attachments/assets/34d8caa5-dc93-4413-91a6-8c14b4a75052" />
 <img width="915" height="992" alt="Screenshot 2026-07-01 192832" src="https://github.com/user-attachments/assets/7f9cb3dc-2a8f-41a9-bf1f-abbc2076c239" />
 <img width="927" height="1002" alt="Screenshot 2026-07-01 192733" src="https://github.com/user-attachments/assets/7c91d444-5076-4953-9132-fe43873507d2" />
