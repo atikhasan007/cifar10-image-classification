@@ -47,6 +47,7 @@ class TrainingConfig:
     reduce_lr_patience: int
     min_learning_rate: float
     early_stopping_patience: int
+    validation_split: float
 
 
 
