@@ -94,6 +94,7 @@ class ConfigurationManager:
             reduce_lr_patience=int(params.REDUCE_LR_PATIENCE),
             min_learning_rate=float(params.MIN_LEARNING_RATE),
             early_stopping_patience=int(params.EARLY_STOPPING_PATIENCE),
+             validation_split=float(params.VALIDATION_SPLIT)
         )
 
     # ==========================
