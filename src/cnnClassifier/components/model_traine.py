@@ -2,8 +2,6 @@ import tensorflow as tf
 import numpy as np
 from pathlib import Path
 
-from src.cnnClassifier.entity.config_entity import TrainingConfig
-
 
 class Training:
     def __init__(self, config: TrainingConfig):
@@ -27,7 +25,6 @@ class Training:
     def get_callbacks(self):
 
         return [
-
             tf.keras.callbacks.ReduceLROnPlateau(
                 monitor="val_loss",
                 factor=self.config.reduce_lr_factor,
@@ -42,33 +39,73 @@ class Training:
                 restore_best_weights=True,
                 verbose=1
             )
-
         ]
 
     def train(self):
 
-        self.load_data()
+    self.load_data()
+    self.get_base_model()
 
-        self.get_base_model()
+    optimizer = tf.keras.optimizers.Adam(
+        learning_rate=self.config.learning_rate
+    )
 
-        optimizer = tf.keras.optimizers.Adam(
-            learning_rate=self.config.learning_rate
+    self.model.compile(
+        optimizer=optimizer,
+        loss="sparse_categorical_crossentropy",
+        metrics=["accuracy"]
+    )
+
+    if self.config.is_augmentation:
+
+        train_datagen = ImageDataGenerator(
+            rotation_range=self.config.rotation_range,
+            width_shift_range=self.config.width_shift_range,
+            height_shift_range=self.config.height_shift_range,
+            horizontal_flip=self.config.horizontal_flip,
+            zoom_range=self.config.zoom_range,
+            brightness_range=self.config.brightness_range,
+            shear_range=self.config.shear_range,
+            channel_shift_range=self.config.channel_shift_range,
+            validation_split=self.config.validation_split
         )
 
-        self.model.compile(
-            optimizer=optimizer,
-            loss="sparse_categorical_crossentropy",
-            metrics=["accuracy"]
-        )
-
-        self.model.fit(
+        train_generator = train_datagen.flow(
             self.X_train,
             self.y_train,
-            validation_data=(self.X_test, self.y_test),
+            batch_size=self.config.batch_size,
+            subset="training",
+            shuffle=True
+        )
+
+        validation_generator = train_datagen.flow(
+            self.X_train,
+            self.y_train,
+            batch_size=self.config.batch_size,
+            subset="validation",
+            shuffle=False
+        )
+
+        history = self.model.fit(
+            train_generator,
+            validation_data=validation_generator,
+            epochs=self.config.epochs,
+            callbacks=self.get_callbacks(),
+            verbose=2
+        )
+
+    else:
+
+        history = self.model.fit(
+            self.X_train,
+            self.y_train,
+            validation_split=self.config.validation_split,
             epochs=self.config.epochs,
             batch_size=self.config.batch_size,
             callbacks=self.get_callbacks(),
             verbose=2
         )
 
-        self.model.save(self.config.trained_model_path)
+    self.model.save(self.config.trained_model_path)
+
+    return history
